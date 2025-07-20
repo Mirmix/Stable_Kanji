@@ -1,0 +1,4 @@
+data/
+dreambooth_lora/kanji_dreambooth_lora_output/
+text_to_image_lora/kanji_text_to_image_lora/
+sd/sd_scratch_output/

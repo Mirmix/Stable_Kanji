@@ -1,0 +1,14 @@
+lxml
+cairosvg
+pillow
+pandas 
+torch
+torchvision
+transformers
+diffusers[torch]
+datasets
+accelerate
+safetensors
+bitsandbytes
+xformers
+peft
