@@ -16,7 +16,7 @@ This project was inspired by these tweets:
 - [![hardmaru tweet](https://img.shields.io/badge/Tweet-%40hardmaru-1da1f2?logo=twitter&style=flat)](https://x.com/hardmaru/status/1611237067589095425)
 - [![enpitsu tweet](https://img.shields.io/badge/Tweet-%40enpitsu-1da1f2?logo=twitter&style=flat)](https://x.com/enpitsu/status/1610587513059684353)
 
-Project by Nail Ibrahimli as a fun weekend project.
+Project kicked off by Nail Ibrahimli as a fun weekend project.
 
 ## Introduction
 This fun project explores SD-based generative modeling for Japanese Kanji-like characters from English definitions. The goal is to enable a diffusion model to hallucinate plausible Kanji for concepts that do not have traditional characters (e.g., "Artificial Intelligence").
@@ -49,34 +49,32 @@ This fun project explores SD-based generative modeling for Japanese Kanji-like c
 
 ## Sample Results
 
-Teaser images from the results (see `sample_results/` for more):
+Here are teaser results showing 4 generated samples for each prompt:
 
 ### DreamBooth LoRA
 - Prompt: "a kanji character for love"
-  - ![DreamBooth LoRA Love](sample_results/dreambooth_lora_samples/grid_0_a_kanji_character_fo.png)
+  - ![DreamBooth LoRA Love](sample_results/dreambooth_lora_samples/love.png)
 - Prompt: "a kanji character for Artificial Intelligence"
-  - ![DreamBooth LoRA Artificial Intelligence](sample_results/dreambooth_lora_samples/grid_4_a_kanji_character_fo.png)
+  - ![DreamBooth LoRA Artificial Intelligence](sample_results/dreambooth_lora_samples/ai.png)
 
 ### Text-to-Image LoRA
 - Prompt: "love; affection; favourite"
-  - ![Text-to-Image LoRA Love](sample_results/text_to_image_lora_samples/text2img_grid_0_love\;_affection\;_fav.png )
+  - ![Text-to-Image LoRA Love](sample_results/text_to_image_lora_samples/love.png )
 - Prompt: "Artificial Intelligence"
-  - ![Text-to-Image LoRA Artificial Intelligence](sample_results/text_to_image_lora_samples/text2img_grid_4_artificial_intellige.png)
+  - ![Text-to-Image LoRA Artificial Intelligence](sample_results/text_to_image_lora_samples/ai.png)
 
 ### Stable Diffusion: finetuning unet
 - Prompt: "love; affection; favourite"
-  - ![SD finetune Love](sample_results/sd_pretrained_samples/sd_grid_love;_affection;_fav.png )
+  - ![SD finetune Love](sample_results/sd_pretrained_samples/love.png )
 - Prompt: "Artificial Intelligence"
-  - ![SD finetune Artificial Intelligence](sample_results/sd_pretrained_samples/sd_grid_Artificial_Intellige.png)
+  - ![SD finetune Artificial Intelligence](sample_results/sd_pretrained_samples/ai.png)
 
 ### Stable Diffusion: training unet from scratch
 - Prompt: "love; affection; favourite"
-  - ![SD train Love](sample_results/sd_scratch_samples/sd_grid_love;_affection;_fav.png )
+  - ![SD train Love](sample_results/sd_scratch_samples/love.png )
 - Prompt: "Artificial Intelligence"
-  - ![SD train Artificial Intelligence](sample_results/sd_scratch_samples/sd_grid_Artificial_Intellige.png)
+  - ![SD train Artificial Intelligence](sample_results/sd_scratch_samples/ai.png)
 
-
-*See the `sample_results/` folder for more generated examples.*
 
 ## Discussion
 - **DreamBooth LoRA** is best for learning a style (Kanji-ness) but not for semantic mapping.
@@ -86,7 +84,7 @@ Teaser images from the results (see `sample_results/` for more):
 - All scripts and data processing steps are provided in `data_processing/`.
 - Training and sample generation scripts are in `dreambooth_lora/` and `text_to_image_lora/`.
 - Environment setup instructions are included.
-- Results can be reproduced by following the README files in each folder.
+- Results can be reproduced by following the README files.
 
 ---
 

@@ -3,7 +3,7 @@ accelerate launch train_dreambooth_lora.py \
   --instance_data_dir="train_images" \
   --instance_prompt="a kanji character" \
   --output_dir="kanji_lora_output" \
-  --resolution=256 \
+  --resolution=512 \
   --train_batch_size=4 \
   --gradient_accumulation_steps=1 \
   --learning_rate=1e-4 \

@@ -1,15 +1,15 @@
 #!/bin/bash
 
-if [ ! -d data/kanji_png_128 ]; then
-  echo "Please copy your 128x128 PNGs to data/kanji_png_128/"
-  exit 1
-fi
-if [ ! -f data/metadata.jsonl ]; then
-  echo "Please copy your metadata.jsonl to data/"
-  exit 1
-fi
+echo "Expected directory structure:"
+echo "data/"
+echo "  ├── kanji_png_128/ or kanji_png_256/   # Place your PNG images here"
+echo "  └── metadata.jsonl                     # Place your metadata file here"
 
 # Ensure metadata.jsonl uses 'image' as the key
+
+echo "To train from scratch, uncomment the --from_scratch flag in the accelerate command below."
+echo "Please verify and update the 'train_data_dir' and 'output_dir' variables below as needed for your training setup."
+
 sed -i 's/"image":/"file_name":/g' data/metadata.jsonl
 
 accelerate launch train_text_to_image.py \
@@ -17,7 +17,7 @@ accelerate launch train_text_to_image.py \
   --dataset_name imagefolder \
   --train_data_dir="data/kanji_png_128" \
   --output_dir="sd_pretrained_output" \
-  --resolution=128 \
+  --resolution=512 \
   --train_batch_size=16 \
   --max_train_steps=20000 \
   --checkpointing_steps=5000 \

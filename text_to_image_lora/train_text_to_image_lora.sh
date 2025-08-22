@@ -19,7 +19,7 @@ accelerate launch train_text_to_image_lora.py \
   --pretrained_model_name_or_path="runwayml/stable-diffusion-v1-5" \
   --train_data_dir="text_to_image_data" \
   --output_dir="kanji_text_to_image_lora" \
-  --resolution=256 \
+  --resolution=512 \
   --train_batch_size=4 \
   --gradient_accumulation_steps=1 \
   --max_train_steps=10000 \
